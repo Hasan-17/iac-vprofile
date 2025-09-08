@@ -2,7 +2,7 @@ name: "Vprofile IAC"
 on:
   push:
     branches:
-      - mains
+      - main
       - stage
     paths:
       - terraform/**
@@ -31,8 +31,8 @@ jobs:
           working-directory: ./terraform
 
       steps:
-        -name: "Checkout soruce code"
-         uses: actions/checkout@v4
+        - name: "Checkout soruce code"
+          uses: actions/checkout@v4
 
         - name: "Setup Terraform with specified version on the runner"
           uses: hashicorp/setup-terraform@v2
